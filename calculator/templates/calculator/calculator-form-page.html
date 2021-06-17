@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Calculator{% endblock title %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/home-style.css' %}">
+{% endblock links %}
+
+{% block content %}
+    <section class="wrapper">
+        <form method="POST" action="{% url 'calculator' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Submit</button>
+        </form>
+    </section>
+{% endblock content %}

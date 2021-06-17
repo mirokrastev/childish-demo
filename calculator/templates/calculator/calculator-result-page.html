@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Computed Expression{% endblock title %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/home-style.css' %}">
+{% endblock links %}
+
+{% block content %}
+    <section class="wrapper">
+        <h3>Your result is: {{ result }}</h3>
+        <a href="{% url 'calculator' %}">Back</a>
+    </section>
+{% endblock content %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock title %}
+
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/home-style.css' %}">
+{% endblock links %}
+
+{% block content %}
+    <section class="wrapper">
+        <h1>Welcome to the Calculator-Demo for Childish Software Group</h1>
+        <article>
+            Click <a href="{% url 'calculator' %}">here</a> to view the Calculator page
+        </article>
+    </section>
+{% endblock content %}
